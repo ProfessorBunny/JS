@@ -18,14 +18,23 @@ class Student {
     }
     addScore(score) {
         this.scores.push(score);
+        console.log(this.scores)
         return this.scores
+
     }
     calculateAverage() {
         let sum = this.scores.reduce(function (a, b) { return a + b; })
         return sum / this.scores.length;
     }
+
+    static enrollStudents() {
+        return "Enrolling Students"
+    }
 }
 
-let firstStudent = new Student("Colt", "Steele", 1);
-let secondStudent = new Student("Blue", "Steele", 2);
-
+let firstStudent = new Student("Nikunj", "Raghav", 1);
+let secondStudent = new Student("Diya", "Raghav", 2);
+firstStudent.addScore(89)
+firstStudent.addScore(89)
+firstStudent.addScore(89)
+console.log(Student.enrollStudents())
